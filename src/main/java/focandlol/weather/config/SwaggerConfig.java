@@ -20,8 +20,11 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("focandlol.weather"))
                 .paths(PathSelectors.any())
-                .build().apiInfo(apiInfo());
+                .build().apiInfo(apiInfo())
+                .useDefaultResponseMessages(false)
+                ;
     }
+
 
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
